@@ -13,6 +13,10 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
   private int front;
 
   private int rear;
+  
+  private node head;
+  
+  private node tail;
 
   private final E[] data;
 
@@ -29,36 +33,69 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
 
   @Override
   public boolean offer(final E obj) {
-    // TODO
-    return false;
+      // TODO
+      if(size < capacity)
+      size ++;
+      rare = (rare + 1) % capacity
+      data[rear] = obj 
+      return true 
   }
+      return false
+   
 
   @Override
-  public E peek() {
+  public E peek() //return head.data if(head != null) {
     // TODO
-    return null;
+    if (size == 0) {
+        return null
+    } else {
+        return data[front];
+    }
   }
 
-  @Override
+  @Override //removeFirst
   public E poll() {
-    // TODO
-    return null;
+      // TODO
+     if (size ==0) {
+      return null;
+  }   else  {
+      E result = data[front];
+      front = null
+      front = (front + 1) % capacity 
+      size --;
+      return result;
   }
+  }
+      
 
   @Override
   public boolean isEmpty() {
-    // TODO
-    return true;
+     
+       // TODO 
+       if(size == 0)
+       return true;
+       else 
+       return false
   }
 
   @Override
+  // TODO 
   public int size() {
     return size;
   }
 
   @Override
   public List<E> asList() {
-    // TODO implement using an ArrayList preallocated with the right size
-    return Arrays.asList();
+    // TODO implement using an ArrayList preallocated with the right size //RETURN ARRAYLIST WITH SIZE OF
+    datalist = new Arraylist<>(size);
+    while(!isEmpty()) { 
+        datalist.add[data]front
+        front = (front + 1) % capacity;
+        size --;
+        //iterate and copy the items you find between rear and front 
+    }
+    return datalist();
+    
+    
   }
-}
+
