@@ -89,7 +89,7 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
     // TODO implement using an ArrayList preallocated with the right size //RETURN ARRAYLIST WITH SIZE OF
     datalist = new Arraylist<>(size);
     while(!isEmpty()) { 
-        datalist.add[data]front
+        datalist.add(data[front]) //adding to the list. Data is the array and front is the index that you are keeping track of. 
         front = (front + 1) % capacity;
         size --;
         //iterate and copy the items you find between rear and front 
