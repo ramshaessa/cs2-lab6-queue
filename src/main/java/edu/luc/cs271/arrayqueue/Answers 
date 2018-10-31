@@ -1,0 +1,8 @@
+Why does FixedArrayQueue require an explicit constructor?
+Maximum length of the queue is specified by the argument in the constructor. 
+What happens when you offer an item to a full FixedArrayQueue?
+Same as Addlast to the queue. It returns true or false. 
+What happens when you poll an empty FixedArrayQueue?
+It returns null 
+What is the time and (extra) space complexity of each of the FixedArrayQueue methods?
+Time complexity for offer and poll is O(log(n)) and for peek is O(1). Space complexity is O(1).
